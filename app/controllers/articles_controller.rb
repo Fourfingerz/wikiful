@@ -21,6 +21,10 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	def mattsthebest
+		@somethingelse = "McDonalds is the Greatest"
+	end
+
 	private
 		def article_params
 			params.require(:article).permit(:title, :content, :category_ids => [])
