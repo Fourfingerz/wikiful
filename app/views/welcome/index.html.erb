@@ -1,2 +1,14 @@
-<h1>Welcome to JC's Development Branch</h1>
-<p>This is a new branch based on the Master branch.</p>
+<h1>Wikiful</h1>
+<p>The world's knowledge of Pig Latin at your fingertips</p>
+<% @recent_articles.each do |article| %>
+	<div>
+		<h3><%= link_to article.title, article %></h3>
+			<p>Published on <%= article.created_at.strftime('%b %d, %Y') %></p>
+			<p>Filed under: <% article.categories.each do |category| %>
+					<%= category.name%>&nbsp;
+				<% end %>
+			</p>
+			<p><%= truncate(article.content,length: 100) %></p>	
+	</div>
+<% end %>
+
