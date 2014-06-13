@@ -1,7 +1,7 @@
-<h1>There are <%= @category.articles.count(:title) %> articles filed under <%= @category.name %> </h1>
-<% @category.articles.order(:created_at).each do |article| %>
-	<div>
-		<h3><%= link_to article.title, article %></h3>
 			<p>Published on <%= article.created_at.strftime('%b %d, %Y')%></p>
+		<h3><%= link_to article.title, article %></h3>
 	</div>
+	<div>
+<% @category.articles.order(:created_at).each do |article| %>
 <% end %>	
+<h1>There are <%= @category.articles.count(:title) %> articles filed under <%= @category.name %> </h1>
