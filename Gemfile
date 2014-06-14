@@ -39,6 +39,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'faker'
-gem 'twitter_bootstrap_rails'
+gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer'
