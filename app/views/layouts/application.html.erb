@@ -2,13 +2,51 @@
 <html>
 <head>
   <title>Wikiful</title>
+  	<!--[if lt IE 9]>
+  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<%= link_to "Wikiful", root_path, :class => "brand" %>
+			<div style="float: right;">Eventually log in/out and sign up links will go here</div>
+			</div>
+		</div>
+	</div>
+<div class="container">
+	<div class="row">
+		<div class="span9"></div>
+		<div class="span3">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, hic, voluptates, officiis dolorum beatae sequi dolores id fugiat provident eaque quia neque odit magni praesentium excepturi quae vero deserunt laudantium.</p>
+		</div>
+	</div>
+</div>
+<div class="span3 sidebar">
+	<div class="my-wiki-site">
+		<h4>Fake Ass Ghetto Mafia Wikipedia</h4>
+		<ul>
+			<li><%= link_to "Write a Wiki", new_article_path %></li>
+		</ul>
+	</div>
+	<div class="categories-sidebar">
+		<h4>Categories</h4>
+		<ul>
+			<% @categories.each do |category| %>
+				<li><%= link_to category.name, category %></li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="about">
+		<h4>About FAGM Wikipedia</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto earum neque perspiciatis quia animi debitis quod repellat vitae explicabo. Sapiente aliquam reprehenderit id vitae atque ducimus facere molestias soluta?</p>
+	</div>
+</div>
+<%= yield %> 
 
 </body>
 </html>
