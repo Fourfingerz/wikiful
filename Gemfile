@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -38,7 +38,14 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Faker fills up tables in database SQL Lorum Ipsum
 gem 'faker'
+
+# Visual styling framework based on Twitter's visual style
 gem 'twitter-bootstrap-rails'
+
+# Related to Bootstrap, visual style framework
 gem 'less-rails'
+
+# Javascript interpreter for Ruby Framework
 gem 'therubyracer'
