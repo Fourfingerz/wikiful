@@ -14,35 +14,29 @@
 	<div class="navbar-inner">
 		<div class="container">
 			<%= link_to "Wikiful", root_path, :class => "brand" %>
-			<div style="float: right;">Eventually log in/out and sign up links will go here</div>37098
+			<div style="float: right;">Eventually log in/out and sign up links will go here</div>
 			</div>
 		</div>
 	</div>
-<div class="container">
-	<div class="row">
-		<div class="span9"></div>
-		<div class="span3">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, hic, voluptates, officiis dolorum beatae sequi dolores id fugiat provident eaque quia neque odit magni praesentium excepturi quae vero deserunt laudantium.</p>
-		</div>
-	</div>
-</div>
+
 <div class="span3 sidebar">
 	<div class="my-wiki-site">
-		<h4>Fake Ass Ghetto Mafia Wikipedia</h4>
+		<img src="http://2.bp.blogspot.com/-qSBLtcVU-h0/UL_1BwC1l_I/AAAAAAAABjg/6NCOAQfX9MY/s1600/m123194294.gif" width="171" height="313">
+		<li class="nav-header" font_size: >Wikiful</li>
 		<ul>
 			<li><%= link_to "Write a Wiki", new_article_path %></li>
 		</ul>
 	</div>
 	<div class="categories-sidebar">
-		<h4>Categories</h4>
-		<ul>
+		<li class="nav-header">Categories</li>
+		<ul class="nav nav-list">
 			<% @categories.each do |category| %>
 				<li><%= link_to category.name, category %></li>
 			<% end %>
 		</ul>
 	</div>
 	<div class="about">
-		<h4>About FAGM Wikipedia</h4>
+		<h4>About Wikiful</h4>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto earum neque perspiciatis quia animi debitis quod repellat vitae explicabo. Sapiente aliquam reprehenderit id vitae atque ducimus facere molestias soluta?</p>
 	</div>
 </div>
